@@ -1,0 +1,17 @@
+import jiti from 'file:///E:/gitpro/cli-unbuild-stub-issue/node_modules/.pnpm/jiti@1.16.2/node_modules/jiti/lib/index.js';
+// import @babel/plugin-proposal-dynamic-import
+import dynamicImport from '@babel/plugin-proposal-dynamic-import';
+
+/** @type {import("E:/gitpro/cli-unbuild-stub-issue/src/cli")} */
+const _module = jiti(null, {
+  interopDefault: true,
+  esmResolve: true,
+  // add plugins
+  transformOptions: {
+    babel: {
+      plugins: [dynamicImport],
+    },
+  },
+})('E:/gitpro/cli-unbuild-stub-issue/src/cli.ts');
+
+export default _module;

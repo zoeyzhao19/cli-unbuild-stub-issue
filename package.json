@@ -1,0 +1,74 @@
+{
+  "name": "cli-unbuild-stub-issue",
+  "version": "0.2.6",
+  "description": "",
+  "type": "module",
+  "homepage": "https://github.com/zoeyzhao19/cli-unbuild-stub-issue#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoeyzhao19/cli-unbuild-stub-issue.git"
+  },
+  "bin": {
+    "clitest": "./bin/index.js"
+  },
+  "bugs": "https://github.com/zoeyzhao19/cli-unbuild-stub-issue/issues",
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "rimraf dist && unbuild",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "format": "prettier --write .",
+    "lint": "eslint --fix ./src/**",
+    "bump": "bump --commit --tag --push"
+  },
+  "keywords": [],
+  "sideEffects": false,
+  "author": "",
+  "license": "MIT",
+  "main": "./dist/cli.mjs",
+  "module": "./dist/cli.mjs",
+  "types": "./dist/cli.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/cli.d.ts",
+      "require": "./dist/cli.cjs",
+      "import": "./dist/cli.mjs"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/cli.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/plugin-proposal-dynamic-import": "^7.18.6",
+    "@babel/plugin-transform-modules-commonjs": "^7.20.11",
+    "@jsdevtools/version-bump-prompt": "^6.1.0",
+    "@types/babel__core": "^7.20.0",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.3",
+    "rimraf": "^4.1.2",
+    "tsx": "^3.12.3",
+    "typescript": "^4.9.5",
+    "unbuild": "^1.1.1",
+    "vitest": "^0.28.4"
+  },
+  "packageManager": "pnpm@7.26.3",
+  "dependencies": {
+    "babel-plugin-dynamic-import-node": "^2.3.3",
+    "cac": "^6.7.14",
+    "vite": "^4.1.1"
+  }
+}
